@@ -1,0 +1,10 @@
+.t-log-but{
+    margin-left : auto !important;
+}
+.t-menu-but{
+    margin-left: -12px !important;
+    margin-right: 20px !important;
+}
+.main-toolbar{
+    flex-grow: 1;
+}
