@@ -1,0 +1,57 @@
+.t-search-paper{
+    flex-grow: 1;
+    margin : -4px 10px -4px 25px !important;
+    color : #E5EDF3;
+    background-color: #4B8CF2 !important;
+    padding: 5px;
+    height : 30px;
+    display: flex;
+    align-items: center;
+    box-shadow : none !important;
+    text-align : left !important;
+    position: relative !important;
+}
+.t-search-icon{
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+.t-search-input{
+    background-color: #4B8CF2;
+    outline: none;
+    border: none;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 16px;
+    flex-grow : 1;
+}
+.t-search-list{
+    padding : 0 !important;
+    font-size : 13px;
+    color : #A0AAB5 !important;
+}
+.t-search-item{
+    padding : 8px 16px !important;
+    transition: 0.2s;
+}
+.t-search-item:hover{
+    background-color: #F0F0F0;
+    border-radius: 4px;
+    cursor : pointer;
+}
+.t-item-avatar{
+    margin-right : 16px !important;
+    width : 30px !important;
+    height: 30px !important;
+    font-size : 16px !important;
+}
+.t-item-avatar i{
+    width : 16px !important;
+    height: 16px !important;
+    font-size : 16px !important;
+}
+.t-search-popper{
+    flex-grow : 1 !important;
+    width: 100% !important;
+    margin-top : 4px !important;
+    z-index: 1;
+}

@@ -1,0 +1,29 @@
+.don-label-cont{
+    text-align : left !important;
+    color : #757575;
+}
+.don-label-color{
+    border-radius : 100px;
+    display: inline-block;
+    width : 12px;
+    margin-right : 5px; 
+    height:12px;
+}
+.don-labels{
+    margin : auto 0px;
+}
+.don-count{
+    position: absolute;
+    top: 0;
+    display: flex;
+    left: 0;
+    font-size: 26px;
+    height: 100%;
+    font-weight: 500;
+    width: 100%;
+  }
+.recharts-wrapper, .recharts-surface{
+    z-index: 1;
+    width : 100% !important;
+    height : 100% !important;
+}

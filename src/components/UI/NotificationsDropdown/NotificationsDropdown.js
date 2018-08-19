@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import {Button, ClickAwayListener, Grow, List, ListItem, ListItemAvatar, ListItemText, Paper, Popper, Avatar} from '@material-ui/core';
+import {IconButton, ClickAwayListener, Grow, List, ListItem, ListItemAvatar, ListItemText, Paper, Popper, Avatar} from '@material-ui/core';
+import windowSize from 'react-window-size';
 
 const styles = {
 }
@@ -21,21 +22,30 @@ class UserDropdown extends Component {
     }
 
     render(){
+        let placement = this.props.windowWidth > 800 ? "bottom-end" : "left";
+        // console.log(this.props.windowWidth);
         return(
             <div className="notifications-dropdown">
-                <Button
+                <IconButton
                     size="small"
                     buttonRef={node => {
                         this.anchorEl = node;
                     }}
                     onClick={this.handleToggle}
-                    style={{color : "#FFF"}}
-                    variant="text">
+                    style={{color : "#FFF"}}>
                     <i className="material-icons">
                         notifications
                     </i>
-                </Button>
-                <Popper open={this.state.open} anchorEl={this.anchorEl} transition disablePortal>
+                </IconButton>
+                <Popper open={this.state.open} anchorEl={this.anchorEl} transition disablePortal
+                    placement={placement}
+                    style={{zIndex : 2}}
+                    modifiers={{
+                        preventOverflow:{
+                            enabled : true,
+                            boundariesElement : 'window'
+                        }
+                    }}>
                     {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
@@ -68,4 +78,4 @@ class UserDropdown extends Component {
     }
 }
 
-export default withStyles(styles)(UserDropdown);
+export default windowSize(withStyles(styles)(UserDropdown));

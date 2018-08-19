@@ -8,3 +8,38 @@
 .main-toolbar{
     flex-grow: 1;
 }
+.t-right-compns{
+    margin-left : auto !important;
+    width : initial !important;
+}
+.t-full-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t-user-image{
+    width : 36px !important;
+    height: 36px !important;
+    margin : -4px;
+}
+@media screen and (max-width : 940px){
+    .t-hide-smd{
+        display : none !important;
+    }
+    .t-search-paper{
+        margin-left : 10px !important;
+    }
+    .t-menu-but
+    {
+        margin-right: 0 !important;
+    }
+    .t-right-compns{
+        margin-left : -5px !important;
+        margin-right : -20px !important;
+    }
+}
+@media screen and (max-width : 500px){
+    .t-right-compns{
+        display: none !important;
+    }
+}

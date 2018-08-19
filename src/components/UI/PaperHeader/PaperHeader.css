@@ -1,0 +1,12 @@
+.ph-main p{
+    margin : 0;
+    text-align: left;
+}
+.ph-primary{
+    color : #2277EF;
+    font-size : 18px;
+}
+.ph-secondary{
+    font-size : 14px;
+    color : #A1A3A8;
+}

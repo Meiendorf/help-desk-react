@@ -1,17 +1,52 @@
 import React, { Component } from 'react';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import {connect} from 'react-redux';
+
+import Layout from './Layout/Layout';
+import Dashboard from '../components/Dashboard/Dashboard';
+import Auth from './Auth/Auth';
+import * as actions from '../store/actions';
 import './App.css';
 
-import Layout from './Layout/Layout'
-
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Layout>
-        </Layout>
-      </div>
-    );
-  }
+    componentDidMount(){
+        this.props.restoreAuthState();
+    }
+    render() {
+        let routes;
+        if(this.props.token == null){
+            routes = (
+                <Switch>
+                    <Route path="/login" exact component={Auth}/>
+                    <Redirect to="/login"/>
+                </Switch>
+            );
+        }else{
+            routes = (
+                <Switch>
+                    <Route path="/login" exact component={Auth}/>
+                    <Route path="/" exact component={Dashboard}/>
+                    <Redirect to="/"/>
+                </Switch>
+            )
+        }
+        return (
+        <div className="App">
+            {routes}
+        </div>);
+    }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return{
+        token : state.auth.token
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        restoreAuthState : () => dispatch(actions.restoreFromStorage())
+    }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

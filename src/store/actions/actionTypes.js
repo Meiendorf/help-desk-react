@@ -1,0 +1,11 @@
+export const AUTH_START = 'AUTH_START';
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_FAIL = 'AUTH_FAIL';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT';
+export const AUTH_GET_INFO = "AUTH_GET_INFO";
+export const AUTH_RESTORE = "AUTH_RESTORE";
+export const AUTH_RESET_START = "AUTH_RESET_START";
+export const AUTH_RESET_START_SUCCESS = "AUTH_RESET_START_SUCCESS";
+export const AUTH_RESET_PASSWORD = "AUTH_RESET_PASSWORD";
+export const AUTH_RESET_FAIL = "AUTH_RESET_FAIL";
+export const AUTH_RESET_END = "AUTH_RESET_END";

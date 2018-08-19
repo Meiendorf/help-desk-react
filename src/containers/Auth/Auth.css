@@ -1,0 +1,36 @@
+.au-main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    background-color: #eee;
+    height : 100%;
+}
+@media only screen and (min-width : 1000px){
+    .au-main{
+        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-rows: 2fr 3fr 2fr;
+    }
+}
+@media only screen and (min-width : 1300px){
+    .au-main{
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 3fr 3fr 3fr;
+    }
+}
+@media only screen and (max-width : 600px){
+    .au-main-paper{
+        margin: 6px;
+        padding: 15px;
+    }
+    .au-main{
+        grid-template-columns: 3fr 20fr 3fr;
+        grid-template-rows: 3fr 10fr 3fr;
+    }
+    
+}
+@media only screen and (max-width : 500px){
+    .au-main{
+        grid-template-columns: 0fr 1fr 0fr;
+        grid-template-rows: 3fr 10fr 6fr;
+    }
+}
